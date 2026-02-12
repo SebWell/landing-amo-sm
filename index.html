@@ -535,7 +535,7 @@
       border: 1px solid var(--border);
       background: var(--bg);
       transition: transform 0.2s;
-      scroll-snap-align: start;
+      scroll-snap-align: center;
     }
 
     .gallery-card:hover {
@@ -1171,17 +1171,19 @@
       }
 
       .gallery-track {
-        gap: 14px;
+        gap: 20px;
         padding: 0 20px 16px;
+        scroll-padding-inline: 20px;
       }
 
       .gallery-card {
         flex: 0 0 calc(100vw - 40px);
+        scroll-snap-align: start;
       }
 
       .gallery-slides,
       .gallery-slides img {
-        height: 220px;
+        height: 240px;
       }
 
       .gallery-arrow {
