@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sébastien Mignot — AMO Promotion Immobilière — Assistance à Maîtrise d'Ouvrage</title>
+  <meta name="description" content="Assistance à Maîtrise d'Ouvrage pour promoteurs immobiliers. +17 ans d'expérience, +500 logements livrés. Conseil et assistance opérationnelle du montage à la GPA. Arradon, Bretagne.">
+  <meta name="author" content="Sébastien Mignot">
+  <link rel="canonical" href="https://sebastien-mignot.com">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sébastien Mignot — AMO Promotion Immobilière">
+  <meta property="og:description" content="Assistance à Maîtrise d'Ouvrage pour promoteurs immobiliers. +17 ans d'expérience, +500 logements livrés. Conseil et assistance opérationnelle du montage à la GPA. Arradon, Bretagne.">
+  <meta property="og:url" content="https://sebastien-mignot.com">
+  <meta property="og:image" content="https://sebastien-mignot.com/photos/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Sébastien Mignot — AMO">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sébastien Mignot — AMO Promotion Immobilière">
+  <meta name="twitter:description" content="Assistance à Maîtrise d'Ouvrage pour promoteurs immobiliers. +17 ans d'expérience, +500 logements livrés. Conseil et assistance opérationnelle du montage à la GPA. Arradon, Bretagne.">
+  <meta name="twitter:image" content="https://sebastien-mignot.com/photos/og-image.png">
+
+  <!-- SEO compléments -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#171717">
+
+  <!-- Preconnect Cal.com -->
+  <link rel="preconnect" href="https://app.cal.com" crossorigin>
+  <link rel="dns-prefetch" href="https://app.cal.com">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Favicon SVG inline — initiales SM -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='hsl(0,0%25,9%25)'/><text x='16' y='22' text-anchor='middle' font-family='-apple-system,BlinkMacSystemFont,sans-serif' font-size='15' font-weight='600' fill='hsl(0,0%25,98%25)'>SM</text></svg>" type="image/svg+xml">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --fg: hsl(0 0% 8%);
+      --fg-light: hsl(0 0% 3.9%);
+      --muted: hsl(0 0% 45%);
+      --muted-bg: hsl(0 0% 96.5%);
+      --border: hsl(0 0% 88%);
+      --bg: hsl(0 0% 100%);
+      --accent: hsl(0 0% 9%);
+      --accent-fg: hsl(0 0% 98%);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-alt {
+      background: var(--muted-bg);
+    }
+
+    .section-missions-bg {
+      background: linear-gradient(hsla(0,0%,96.5%,0.92), hsla(0,0%,96.5%,0.92)), url('photos/plan-architecte.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .navbar-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--fg);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .navbar-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .navbar-links a:hover {
+      color: var(--fg);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      color: var(--fg);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 56px;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px 24px;
+      z-index: 99;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .muted { color: var(--muted); }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--accent-fg);
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: inherit;
+      transition: background 0.15s;
+    }
+    .btn-primary:hover { background: hsl(0 0% 18%); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--fg);
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      text-decoration: none;
+      font-family: inherit;
+      transition: background 0.15s;
+    }
+    .btn-outline:hover { background: var(--muted-bg); }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
+      padding: 4px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    /* ── IMAGES N&B ── */
+    img {
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    img:hover {
+      filter: grayscale(0%);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 120px 0 80px;
+      background: var(--muted-bg);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero-photo {
+      width: 280px;
+      height: 280px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .hero h1 {
+      margin: 20px 0 0;
+    }
+
+    .hero-subtitle {
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.2;
+    }
+
+    .hero-desc {
+      color: var(--muted);
+      font-size: 17px;
+      margin: 20px 0 12px;
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .hero-detail {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 600px;
+      line-height: 1.7;
+      margin: 0 0 32px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .stat-card {
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--fg);
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 16px;
+      margin-top: 12px;
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* ── PARCOURS ── */
+    .parcours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .parcours-text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .parcours-text p {
+      margin: 0 0 16px;
+    }
+
+    .parcours-text p:last-child {
+      margin: 0;
+    }
+
+    .parcours-text strong {
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    .parcours-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .highlight-item {
+      padding: 20px 24px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .highlight-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .highlight-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--fg);
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0 4px;
+    }
+
+    .logo-row img {
+      height: 48px;
+      width: auto;
+      max-width: 130px;
+      object-fit: contain;
+      opacity: 0.7;
+      transition: filter 0.3s, opacity 0.3s;
+    }
+
+    .logo-row img:hover {
+      opacity: 1;
+    }
+
+    /* ── ZONE D'INTERVENTION ── */
+    .zone-intervention {
+      margin-top: 40px;
+      padding: 24px 32px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+    }
+
+    .zone-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .zone-subtitle {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--fg);
+    }
+
+    .zone-content {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .zone-map {
+      flex: 0 0 280px;
+    }
+
+    .zone-map svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .zone-cities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .zone-city {
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--fg);
+    }
+
+    .ref-image-card {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .ref-image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .ref-image-caption {
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--muted);
+      background: var(--bg);
+    }
+
+    .ref-image-caption strong {
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    /* ── GALLERY DÉFILANTE ── */
+    .gallery-section {
+      padding: 80px 0;
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    .gallery-section .section-header {
+      max-width: 1100px;
+      margin: 0 auto 32px;
+      padding: 0 32px;
+    }
+
+    .gallery-track {
+      display: flex;
+      gap: 20px;
+      overflow-x: hidden;
+      padding: 0 0 16px;
+    }
+
+    .gallery-card {
+      flex: 0 0 560px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      transition: transform 0.2s;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .gallery-slides {
+      position: relative;
+      overflow: hidden;
+      height: 340px;
+    }
+
+    .gallery-slides img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      filter: grayscale(100%);
+      transition: filter 0.4s;
+    }
+
+    .gallery-card:hover .gallery-slides img {
+      filter: grayscale(0%);
+    }
+
+    .gallery-slides img.active {
+      display: block;
+    }
+
+    .gallery-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 5;
+    }
+
+    .gallery-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .gallery-dot.active {
+      background: rgba(255,255,255,0.95);
+    }
+
+    .slide-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.8);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--fg);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .gallery-card:hover .slide-arrow {
+      opacity: 1;
+    }
+
+    .slide-arrow--prev { left: 8px; }
+    .slide-arrow--next { right: 8px; }
+
+    .gallery-caption {
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--muted);
+      background: var(--bg);
+    }
+
+    .gallery-caption strong {
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    .gallery-wrap {
+      position: relative;
+    }
+
+    .gallery-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(calc(-50% - 20px));
+      z-index: 10;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--fg);
+      transition: background 0.15s, box-shadow 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .gallery-arrow:hover {
+      background: var(--bg);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+
+    .gallery-arrow:disabled {
+      opacity: 0.3;
+      cursor: default;
+      box-shadow: none;
+    }
+
+    .gallery-arrow--left {
+      left: 12px;
+    }
+
+    .gallery-arrow--right {
+      right: 12px;
+    }
+
+    /* ── MISSIONS GRID ── */
+    .missions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .accordion-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: left;
+      font-size: 15px;
+      color: var(--fg);
+      transition: background 0.15s;
+    }
+    .accordion-btn:hover { background: hsl(0 0% 98.5%); }
+
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .phase-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--muted-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    .section-alt .phase-num {
+      background: var(--bg);
+    }
+
+    .accordion-title {
+      font-weight: 500;
+    }
+
+    .chevron {
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .accordion.open .chevron {
+      transform: rotate(180deg);
+    }
+
+    .accordion-body {
+      display: none;
+      padding: 0 20px 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .accordion.open .accordion-body {
+      display: block;
+    }
+
+    .accordion-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 16px 0;
+      color: var(--muted);
+    }
+
+    .mission-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mission-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .mission-item svg {
+      margin-top: 3px;
+      flex-shrink: 0;
+      color: var(--muted);
+    }
+
+    .livrables {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: var(--muted-bg);
+      border-radius: 6px;
+    }
+
+    .section-alt .livrables {
+      background: var(--bg);
+    }
+
+    .livrables-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .livrables-text {
+      font-size: 13px;
+    }
+
+    /* ── OFFRES COMPLÉMENTAIRES ── */
+    .complementary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .complementary-card {
+      display: block;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .complementary-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .complementary-logo {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 16px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: filter 0.3s, opacity 0.3s;
+    }
+
+    .complementary-card:hover .complementary-logo {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    .complementary-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--fg);
+      margin-bottom: 8px;
+    }
+
+    .complementary-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .complementary-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--fg);
+    }
+
+    .funding-desc strong {
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    /* ── FORMULES ── */
+    .packs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .pack-card {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pack-card.highlight {
+      border-color: var(--fg);
+      border-width: 2px;
+      position: relative;
+    }
+
+    .pack-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .pack-price {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .pack-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .pack-includes {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pack-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .pack-item svg {
+      margin-top: 2px;
+      flex-shrink: 0;
+      color: var(--muted);
+    }
+
+    /* ── FAQ ── */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: left;
+      color: var(--fg);
+      transition: background 0.15s;
+    }
+    .faq-btn:hover { background: hsl(0 0% 98.5%); }
+
+    .faq-q {
+      font-size: 15px;
+      font-weight: 500;
+      padding-right: 16px;
+    }
+
+    .faq-body {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      border-top: 1px solid hsl(0 0% 93%);
+      padding-top: 16px;
+    }
+
+    .accordion.open .faq-body {
+      display: block;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--accent);
+      padding: 80px 0;
+    }
+
+    .cta-inner {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--accent-fg);
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+    }
+
+    .cta-desc {
+      color: hsl(0 0% 70%);
+      font-size: 16px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .cta-info {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: hsl(0 0% 60%);
+    }
+
+    /* ── LEGAL ── */
+    .legal-toggle {
+      font-size: 14px;
+      font-weight: 500;
+      color: hsl(0 0% 70%);
+      cursor: pointer;
+      padding: 10px 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .legal-toggle::-webkit-details-marker { display: none; }
+
+    .legal-content {
+      padding: 24px;
+      margin-top: 12px;
+      font-size: 14px;
+      color: hsl(0 0% 70%);
+      line-height: 1.7;
+      background: hsl(0 0% 13%);
+      border-radius: 8px;
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .legal-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+      color: hsl(0 0% 50%);
+    }
+
+    .legal-value {
+      font-size: 14px;
+      color: var(--accent-fg);
+      font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: hsl(0 0% 6%);
+      padding: 32px 0;
+      text-align: center;
+      font-size: 13px;
+      color: hsl(0 0% 45%);
+      line-height: 1.7;
+    }
+
+    /* ── FADE-IN ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .packs-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+
+      .legal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-links { display: none; }
+      .hamburger { display: block; }
+
+      .container { padding: 0 20px; }
+      .navbar-inner { padding: 0 20px; }
+      .mobile-menu { padding: 16px 20px 24px; }
+
+      h1 { font-size: 32px; }
+      h2 { font-size: 24px; }
+
+      .hero {
+        padding: 88px 0 56px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+      }
+
+      .hero-grid .hero-content {
+        order: 2;
+        text-align: left;
+      }
+
+      .hero-grid .hero-photo-wrap {
+        order: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .hero-photo {
+        width: 180px;
+        height: 180px;
+      }
+
+      .hero-subtitle {
+        font-size: 20px;
+      }
+
+      .hero-desc {
+        font-size: 15px;
+      }
+
+      .hero-detail {
+        font-size: 13px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 40px;
+      }
+
+      .stat-card {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        text-align: left;
+      }
+
+      .stat-val {
+        font-size: 24px;
+        margin-bottom: 0;
+        white-space: nowrap;
+      }
+
+      .stat-label {
+        font-size: 13px;
+      }
+
+      .gallery-section {
+        padding: 48px 0;
+      }
+
+      .gallery-section .section-header {
+        padding: 0 20px;
+        margin-bottom: 24px;
+      }
+
+      .gallery-track {
+        gap: 14px;
+      }
+
+      .gallery-card {
+        flex: 0 0 340px;
+      }
+
+      .gallery-slides,
+      .gallery-slides img {
+        height: 220px;
+      }
+
+      .gallery-arrow {
+        display: none;
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+
+      .section-header {
+        margin-bottom: 24px;
+      }
+
+      .parcours-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .zone-content {
+        flex-direction: column;
+      }
+
+      .zone-map {
+        flex: none;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      .missions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .complementary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .packs-grid {
+        grid-template-columns: 1fr;
+        max-width: none;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+      }
+
+      .hero-btns a {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .cta-section {
+        padding: 48px 0;
+      }
+
+      .cta-title {
+        font-size: 24px;
+      }
+
+      .cta-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .legal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "name": "Sébastien Mignot — AMO",
+        "description": "Assistance à Maîtrise d'Ouvrage en promotion immobilière. Conseil et assistance opérationnelle du montage à la GPA.",
+        "url": "https://sebastien-mignot.com",
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.626,
+            "longitude": -2.772
+          },
+          "geoRadius": "150000"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Arradon",
+          "addressRegion": "Bretagne",
+          "addressCountry": "FR"
+        },
+        "founder": { "@id": "#sebastien-mignot" },
+        "email": "s.mignot@buildoto.com",
+        "serviceType": [
+          "Assistance à Maîtrise d'Ouvrage",
+          "AMO Promotion Immobilière",
+          "Pilotage de programmes immobiliers",
+          "Maîtrise d'Ouvrage Déléguée"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Formules d'intervention",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Renfort ponctuel",
+              "description": "Intervention ciblée sur une phase spécifique (DCE, consultation, suivi chantier). Facturation au réel."
+            },
+            {
+              "@type": "Offer",
+              "name": "Convention de programme",
+              "description": "Prise en charge complète d'un programme du montage à la GPA. Facturation au forfait par phase."
+            },
+            {
+              "@type": "Offer",
+              "name": "Accompagnement continu",
+              "description": "Intégration dans l'équipe pour gérer plusieurs opérations en parallèle. Facturation au forfait mensuel."
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "#sebastien-mignot",
+        "name": "Sébastien Mignot",
+        "jobTitle": "AMO — Senior Project Manager",
+        "url": "https://sebastien-mignot.com",
+        "image": "https://sebastien-mignot.com/photos/photo-profil.jpg",
+        "knowsAbout": [
+          "Promotion immobilière",
+          "Assistance à Maîtrise d'Ouvrage",
+          "Gestion de programmes résidentiels",
+          "Pilotage d'opérations immobilières"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "AMO ou MOD — quelle différence concrète ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En AMO, je conseille et j'assiste — vous restez décisionnaire et signataire de tous les actes (marchés, ordres de service, réception). En MOD, j'agis par mandat en votre nom avec une assurance décennale dédiée. Les deux sont possibles selon votre besoin."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment intervenez-vous en pratique ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Je m'intègre dans vos équipes comme un collaborateur opérationnel. J'ai travaillé comme ça pendant 17 ans chez Nexity, Cardinal et en consulting — je connais le fonctionnement interne d'un promoteur. Je travaille avec vos outils, je participe à vos réunions, j'utilise vos process."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les modules IA fonctionnent avec nos logiciels existants ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Je travaille à partir des données que vous avez déjà — fichiers Excel, PDF, emails, logiciels métier (SCI5, Gr Immo, Primpromo…). Les outils que je développe (workflows N8N, bases Supabase/Baserow, interfaces Weweb) se branchent sur votre existant. Pas de migration, opérationnel en quelques jours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "C'est finançable ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les modules IA sont éligibles au programme IA Booster France 2030 de Bpifrance (50% de prise en charge) et au Pack IA France Num (jusqu'à 80%, plafond 18 500 €). Le montage du dossier est inclus dans la prestation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "On peut commencer par un seul programme ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "C'est ce que je recommande. On identifie le programme le plus pertinent, on définit un périmètre clair, et vous jugez sur les résultats avant d'aller plus loin."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">SM</a>
+      <ul class="navbar-links">
+        <li><a href="#missions">Missions</a></li>
+        <li><a href="#ia">Compléments</a></li>
+        <li><a href="#formules">Formules</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <a href="#missions">Missions</a>
+      <a href="#ia">Offres complémentaires</a>
+      <a href="#formules">Formules</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid fade-in">
+        <div class="hero-content">
+          <span class="badge">Promotion immobilière · Résidentiel, commerces & coworking</span>
+          <h1>
+            Sébastien Mignot<br>
+            <span class="hero-subtitle">Assistance à Maîtrise d'Ouvrage</span>
+          </h1>
+          <p class="hero-desc">
+            Conseil et assistance opérationnelle aux promoteurs immobiliers,
+            du montage d'opération à la levée des dernières réserves.
+            Intervention en renfort d'équipe, en remplacement provisoire
+            ou sur programme complet.
+          </p>
+          <p class="hero-detail">
+            +17 ans d'expérience en gestion de programmes résidentiels · +500 logements,
+            2 500 m² de commerces et 1 500 m² d'activités livrés · Projets de 1 à 30 M€.
+          </p>
+          <div class="hero-btns">
+            <button data-cal-link="sebastien-mignot/rendez-vous-decouverte-sebastien-mignot-amo" data-cal-config='{"layout":"month_view"}' class="btn-primary">
+              Réserver un rendez-vous
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </button>
+            <a href="mailto:s.mignot@buildoto.com?subject=Prise%20de%20contact%20AMO" class="btn-outline">
+              Envoyer un email
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="cv-sebastien-mignot.pdf" target="_blank" rel="noopener" class="btn-outline">
+              Voir le CV
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <img src="photos/photo-profil.jpg" alt="Sébastien Mignot — AMO Promotion Immobilière" class="hero-photo" width="280" height="280">
+        </div>
+      </div>
+      <div class="stats-grid fade-in">
+        <div class="stat-card">
+          <div class="stat-val">+17 ans</div>
+          <div class="stat-label">en promotion immobilière — résidentiel, commerces et coworking</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">+500 logts</div>
+          <div class="stat-label">livrés + 2 500 m² commerces + 1 500 m² activités</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">1 à 30 M€</div>
+          <div class="stat-label">maîtrise budgétaire avec écart &lt; 3% au budget référence</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PARCOURS -->
+    <section class="section fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2>Parcours</h2>
+        </div>
+        <div class="parcours-grid">
+          <div class="parcours-text">
+            <p>
+              Responsable de programmes senior avec plus de 17 ans d'expérience chez des promoteurs
+              de premier plan : <strong>Nexity</strong> (Nantes, 2012-2016),
+              <strong>Groupe Cardinal</strong> (Paris, 2017-2020),
+              <strong>Crédit Mutuel Immobilier</strong> (ex-Ataraxia, acteur majeur en Bretagne),
+              puis <strong>consultant indépendant</strong> (UK & NL, 2020-2023).
+              Expérience complète de toutes les phases : faisabilité, coordination MOE,
+              montage technique et financier, PC, conception, DCE, consultation et négociation
+              des marchés, suivi d'exécution, volet commercial, livraison, GPA.
+            </p>
+            <p>
+              Opérations notables : <strong>Le Quartz à Nantes</strong> (Pyramides
+              d'Or 2014), <strong>L'Avant-Scène à La Baule</strong>,
+              <strong>L'Hespérie</strong> et <strong>Le Parvis</strong> (Crédit Mutuel Immobilier).
+              Travaux complexes : fondations spéciales, chaufferies collectives, réhabilitation
+              de bâtiments patrimoniaux.
+            </p>
+            <p>
+              Double compétence développée ces dernières années en outils digitaux
+              et automatisation (IA, workflows, bases de données) pour répondre
+              aux défis opérationnels des promoteurs. Maîtrise avancée de SketchUp
+              pour les études de faisabilité volumétriques, la vérification
+              des plans de vente et la modélisation 3D de projet.
+              Master 2 Management Immobilier (EFAB Paris).
+            </p>
+          </div>
+          <div class="parcours-highlights">
+            <div class="highlight-item">
+              <div class="highlight-label">Promoteurs</div>
+              <div class="logo-row">
+                <img src="photos/logo/promoteurs/nexity.jpg" alt="Nexity" title="Nexity">
+                <img src="photos/logo/promoteurs/groupe-cardinal.png" alt="Groupe Cardinal" title="Groupe Cardinal">
+                <img src="photos/logo/promoteurs/credit-mutuel-immobilier.png" alt="Crédit Mutuel Immobilier" title="Crédit Mutuel Immobilier (ex-Ataraxia)">
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-label">Typologies</div>
+              <div class="highlight-value">Résidentiel · Commerces · Coworking · Réhabilitation · Logement social</div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-label">Outils digitaux</div>
+              <div class="logo-row">
+                <img src="photos/logo/logiciels/claude.png" alt="Claude AI" title="Claude (Anthropic)">
+                <img src="photos/logo/logiciels/n8n.png" alt="n8n" title="n8n — Workflows">
+                <img src="photos/logo/logiciels/supabase.png" alt="Supabase" title="Supabase">
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-label">Formation</div>
+              <div class="highlight-value">Master 2 Management Immobilier — EFAB Paris</div>
+            </div>
+          </div>
+        </div>
+        <div class="zone-intervention">
+          <div class="zone-header">
+            <div class="highlight-label">Zone d'intervention</div>
+          </div>
+          <div class="zone-content">
+            <div class="zone-map">
+              <svg viewBox="90 140 250 195" xmlns="http://www.w3.org/2000/svg">
+                <!-- Bretagne — départements -->
+                <path d="m208.7 188.9l-4.9 7.1-2.9 1.1-1.5-2.7-3.5-0.9-6.2 7.5-1.8-6-3 0.9-12.9-6.5-7.9 3-12.5-3.3 2.1-4.1-2.5-9.3 2.5-8.3-3.6-4.7 1.1-4.3 1.2 1.4 3.2-0.4 1.1-7.7 1.5-1.6 2.2-0.6 1.9 1.4h2.5l2.1-1 2.2 0.3 1.5-1.8 0.9 2-1.5 2.6 3-3.6 2.9-0.8-0.1 2.3-1.2 4.4 1.7-3.1 2.6-0.5-1.1 2 7.2 7.8 2.2 5.4 3 2 0.8 3.7 0.7-2.2 3-1 2.4-2.7 8.1-3.3 2.7-0.2-2 2.5 2.9-1.1 1.8 4.4 1.3-1.9 2.5 0.2v-0.1l1.6 4h-0.3 0.3l2.5 0.3 0.7 0.2 0.4 1.7-1.9 13z" fill="hsl(0,0%,90%)" stroke="hsl(0,0%,70%)" stroke-width="0.5"/>
+                <path d="m151.6 210.1l2 3.4-0.8 1.4-5.5-1.2-1.2-1.9 2.2-0.7-3 0.8-0.3-2.7v2.7l-2.5 0.7-2.2-1-4.2-6.1-0.8 2.5-2.3 0.2-3.5-3.1 1.6-4.6-2.4 4.3 1.3 1.9-2.2 1-1 2.8-5.9-0.2-2.1-1.6 1.5-1.6-1.5-5.5-2.4-3.1-2.8-1.8 1.6-1.7-2.1 1.4-7.5-2.2 2.2-1.3 12.5-1.8 1.8 1.8 2-1.3 0.7-2.5-1.6-3.6-6.8-2.5-1.5 2.6-2.6-4.2 1.3-1.8-0.3-2.2 1.7 2.3 4.9 1 4.6-0.8 2.1 3.1 5.4 1-3.7-0.9-2.8-2 2.2-0.5-4.2-2 2-1.5-2.6-0.2-2.7 0.8-0.8-2.2 7.1-4.5-4.4 2.2-2.3 0.1-7.5 2.9-2.7-1.2-2.7 1.2-1.5-1.8 0.6-5.3 2.5-1.6-2.2-0.9 0.8-2.6 1.8-1.6 2.1-0.8 5.1 1.5-1.9-1.1 2.5-1.2 1.6 1.4-1.9-1.7 1.2-1.9 2.9-0.1 3.8-2 2.3 2.6 6.7-3.1 3 1.6 1-2.2 2.9-0.5 0.4 5 2.2-1.5 1.3 2.5 1.2-4.5 4.7 0.3 1.2 1.7-1.1 4.3 3.6 4.7-2.5 8.3 2.5 9.3-2.1 4.1v0.1l-6.8 3.2 0.5 3.5 3.4 5.5 8.1 1.3 0.1 5.4-2.5 2.8z" fill="hsl(0,0%,90%)" stroke="hsl(0,0%,70%)" stroke-width="0.5"/>
+                <path d="m255.2 207.2l-5.5 2.2-3.6 8.6-0.4 2.2-6.8-3.6-9 3.9-1.6 2.9-13.2 0.4-5.2 3.4-1-5.8 3-0.7-2.8-1.5 2.4-2.2 1-3.2-2.4-1.7 1.6-2.6-1.2-2.5-5.1-2.8-0.5-2.8 3.5-0.9-3.6-0.1-1-4.4 4.9-7.1 9-2.5 1.9-13-0.4-1.7-0.7-0.2-2.5-0.3-1.6-4 0.1-0.8v-0.9l0.7-0.1h2.1v0.1l1.7 4.4 1.3 2-0.5 2.1 1.4-2.1-2.3-5.1 0.7-2.5 2.2-1.5 2.3-0.6 2.2 1-1.5 2.3 2.9 2.4 7.3-0.6 4.7 9.6 2.7 1 7.1-4.8 5.4 2.3-0.1 12.1-1.5 2.4z" fill="hsl(0,0%,90%)" stroke="hsl(0,0%,70%)" stroke-width="0.5"/>
+                <path d="m167.7 242.6l2.9 1.2-1.1 2.1-5.1-1.2-1.3-2.7 0.4-3 2.1 1.4zm41.4-23.4l2.4-2.2 1-3.2-2.4-1.7 1.6-2.6-1.2-2.5-5.1-2.8-0.5-2.8 3.5-0.9-3.6-0.1-1-4.4-2.9 1.1-1.5-2.7-3.5-0.9-6.2 7.5-1.8-6-3 0.9-12.9-6.5-7.9 3-12.5-3.3v0.1l-6.8 3.2 0.5 3.5 3.4 5.5 8.1 1.3 0.1 5.4-2.5 2.8-2.8-0.8 2 3.4 0.1 1.5 2.9 4.4 2.3-0.2 1.5-1.7-0.8-5.1 0.6 2.4 1.7 1.7 1.9-1.7-2.5 4.2 2.2 1.4-2.3-0.6 3.2 1.9 0.1 0.1 1.6 1 1.7-2.5-1.6 3.1 2.1 2.6 0.6 3.5-0.9 2.8 2.1 1.1-1.2-3 0.5-3.8 2.2 1.6 5.1 0.1-0.7-5 1.4 2 2.1 1.5 4.8-0.5 2.1 2.4-1 2.2-2.1-0.6-4.8 0.4 3.8 3.3 12.9-0.9 3.1 1.5-3.4 0.1 1.4 2.4 13.2-3.9 0.4-6-1-5.8 3-0.7z" fill="hsl(0,0%,90%)" stroke="hsl(0,0%,70%)" stroke-width="0.5"/>
+                <!-- Pays de la Loire — départements -->
+                <path d="m213.1 265.2l1.8-1-2.8-4.1-7.8-3 3-1.3 0.6-2.2-0.5-2.5 1.4-2.1 5.8-1.1-5.5-0.7-6.6 3.7-4.1-3.2-2.2 1-2.2-1.2-0.5-4.9 0.9-2.5 3-0.5-0.9-2.2-0.2-0.3 13.2-3.9 0.4-6 5.2-3.4 13.2-0.4 1.6-2.9 9-3.9 6.8 3.6 7.2 13.3-2.7-0.4-1.9 2.4 8.5 3.3 0.3 5.9-14.3 2.1-2.9 2.2 3 0.8 3.6 4.7 0.8 2.8-2.8 4.5 2.8 1.4 0.4 3-4.8-3.5-1.5 2.4-3.2 0.7 0.5 3-2.4 2.1-2.3-1.7v-3.1l-3.4 0.2-0.2 9.5-11.7-5z" fill="hsl(0,0%,93%)" stroke="hsl(0,0%,70%)" stroke-width="0.5"/>
+                <path d="m270.6 269.2l-12.3 0.8-10.6-3.8-0.4-3-2.8-1.4 2.8-4.5-0.8-2.8-3.6-4.7-3-0.8 2.9-2.2 14.3-2.1-0.3-5.9-8.5-3.3 1.9-2.4 2.7 0.4-7.2-13.3 0.4-2.2 10.5 3.5 2.1-1.9 8.7 3.6 3 0.4 5.9-2.7 5.1 1.7 0.6 2.7 6.7-0.2 0.2 3.5 2 2 3.1-1.3 5.2 3.3 7.4 0.1-0.7 2.4-1.7 9.3-5.8 15.3v0.1l-6.6 5.9-2.3-2.3-9.6 0.2-5.6 0.8z" fill="hsl(0,0%,93%)" stroke="hsl(0,0%,70%)" stroke-width="0.5"/>
+                <path d="m256.6 221.5l-10.5-3.5 3.6-8.6 5.5-2.2-1.9-17.3 1.5-2.4 0.1-12.1 8.6 0.8h0.1l3.3 3.7 2.4-1.6 2.5 1.7 6.7-3.3h9.1l0.7-2.7 2.7 0.2 1.9 6 3.3 1.6v2.9 0.1l-4.3 2.7 0.3 6.9-4.4 4 1.2 2.9-5 4.6 1.4 3.4-5.5 7.7 1.5 5.6-5.1-1.7-5.9 2.7-3-0.4-8.7-3.6z" fill="hsl(0,0%,93%)" stroke="hsl(0,0%,70%)" stroke-width="0.5"/>
+                <path d="m312.7 235.3l-6.1-2.6-7.4-0.1-5.2-3.3-3.1 1.3-2-2-0.2-3.5-6.7 0.2-0.6-2.7-1.5-5.6 5.5-7.7-1.4-3.4 5-4.6-1.2-2.9 4.4-4-0.3-6.9 4.3-2.7 3 0.1 11-5.9 2.8 1.5 1.6 8.4 7.2 5 2.9-1 3.1 3.5 3.2 0.7 2.1 3.8-0.4 1.8v0.1l-2 2.1 1.7 2.2 0.4 5.5-6.3 10.6-3.2 1.1-0.6 3.5-7.7 4.5-2.8-0.3z" fill="hsl(0,0%,93%)" stroke="hsl(0,0%,70%)" stroke-width="0.5"/>
+                <path d="m269.3 305.1l0.2-7.4-4.7-17.9-4.2-4.1-2.3-5.7-10.6-3.8-4.8-3.5-1.5 2.4-3.2 0.7 0.5 3-2.4 2.1-2.3-1.7v-3.1l-3.4 0.2-0.2 9.5-11.7-5-5.6-5.6-0.3 0.1-0.8 2.6-3.4 4.3-1.2 2.3 0.2 2.4 8.7 9.5 2.7 5.6 1.2 5.3 8 5.4 3.4 0.5 3.9 4.3 2.9-0.1 2 1.2 1.8 2.5-0.9-2.1 3.9 3.3 0.5-2.7 2.4 0.3 7.1-2.7-1.4 2.9 6.5-0.3 2.4 1.8 9.1-4.5z" fill="hsl(0,0%,93%)" stroke="hsl(0,0%,70%)" stroke-width="0.5"/>
+                <!-- Vannes — point central -->
+                <circle cx="203" cy="240" r="3.5" fill="hsl(0,0%,20%)"/>
+                <circle cx="203" cy="240" r="6" fill="none" stroke="hsl(0,0%,20%)" stroke-width="0.8" opacity="0.5"/>
+                <text x="203" y="249" text-anchor="middle" font-size="6" font-weight="600" fill="hsl(0,0%,20%)" font-family="-apple-system,sans-serif">VANNES</text>
+              </svg>
+            </div>
+            <div class="zone-cities">
+              <span class="zone-city">Vannes</span>
+              <span class="zone-city">Lorient</span>
+              <span class="zone-city">Quimper</span>
+              <span class="zone-city">Brest</span>
+              <span class="zone-city">Saint-Brieuc</span>
+              <span class="zone-city">Rennes</span>
+              <span class="zone-city">Nantes</span>
+              <span class="zone-city">Saint-Nazaire</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE PROGRAMMES -->
+    <section class="gallery-section fade-in">
+      <div class="section-header">
+        <h2>Programmes suivis</h2>
+        <p>Une sélection de programmes résidentiels, commerciaux et d'activités accompagnés en tant que responsable de programmes ou AMO.</p>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow gallery-arrow--left" aria-label="Précédent">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="gallery-arrow gallery-arrow--right" aria-label="Suivant">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+        <div class="gallery-track">
+        <!-- Pour ajouter des photos : déposer des .jpg dans le dossier gallery/<opération>/ nommés 01.jpg, 02.jpg, 03.jpg… puis ajouter les chemins dans data-images séparés par des virgules -->
+        <div class="gallery-card" data-images="photos/gallery/avant-scene/01.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/avant-scene/01.jpg" alt="L'Avant-Scène — La Baule" loading="lazy"></div>
+          <div class="gallery-caption"><strong>L'Avant-Scène</strong> — La Baule (44) · 81 logements + 2 500 m² commerces · Nexity</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/le-rev2/01.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/le-rev2/01.jpg" alt="Le Rev 2 — La Baule" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Le Rev 2</strong> — La Baule (44) · 52 logements · Nexity</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/le-quartz/01.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/le-quartz/01.jpg" alt="Le Quartz — Nantes" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Le Quartz</strong> — Nantes (44) · 25 logements · Pyramides d'Or 2014 · Nexity</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/renouillers/01.jpg,photos/gallery/renouillers/02.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/renouillers/01.jpg" alt="Le Renouillers — Colombes" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Le Renouillers</strong> — Colombes (92) · 66 logements · Groupe Cardinal</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/ilot-cook/01.jpg,photos/gallery/ilot-cook/02.jpg,photos/gallery/ilot-cook/03.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/ilot-cook/01.jpg" alt="Ilot Cook 3 — Colombes" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Ilot Cook 3</strong> — Colombes (92) · 78 logements · Groupe Cardinal</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/le-paradis/01.jpg,photos/gallery/le-paradis/02.jpg,photos/gallery/le-paradis/03.jpg,photos/gallery/le-paradis/04.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/le-paradis/01.jpg" alt="Le Paradis n'est pas artificiel — Colombes" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Le Paradis n'est pas artificiel</strong> — Colombes (92) · 84 logements · Groupe Cardinal</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/alt-marseille/01.jpg,photos/gallery/alt-marseille/02.jpg,photos/gallery/alt-marseille/03.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/alt-marseille/01.jpg" alt="ALT — Marseille" loading="lazy"></div>
+          <div class="gallery-caption"><strong>ALT</strong> — Marseille (13) · Space working · 650 m²</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/endoume-marseille/01.jpg,photos/gallery/endoume-marseille/02.jpg,photos/gallery/endoume-marseille/03.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/endoume-marseille/01.jpg" alt="Endoume — Marseille" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Endoume</strong> — Marseille (13) · Galerie & space working · 300 m²</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/quiberon/01.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/quiberon/01.jpg" alt="Quiberon" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Quiberon</strong> — Rénovation location saisonnière</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/sumo/01.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/sumo/01.jpg" alt="Les Belle Roches — SUMO" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Les Belle Roches</strong> — Résidence de tourisme · SUMO</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/sumo/02.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/sumo/02.jpg" alt="Blomet — SUMO" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Blomet</strong> — Hôtel particulier surélevé · SUMO</div>
+        </div>
+        <div class="gallery-card" data-images="photos/gallery/endoume-marseille/credit-mutuel-immobilier/01.jpg,photos/gallery/endoume-marseille/credit-mutuel-immobilier/02.jpg">
+          <div class="gallery-slides"><img src="photos/gallery/endoume-marseille/credit-mutuel-immobilier/01.jpg" alt="Crédit Mutuel Immobilier" loading="lazy"></div>
+          <div class="gallery-caption"><strong>Crédit Mutuel Immobilier</strong> — ex-Ataraxia · Consulting</div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSIONS -->
+    <section id="missions" class="section section-alt section-missions-bg fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2>Périmètre d'intervention</h2>
+          <p>
+            Chaque phase est activable indépendamment — en renfort ponctuel,
+            sur un programme complet, ou sur des missions spécifiques.
+          </p>
+        </div>
+
+        <div class="missions-grid accordion-group" data-group="phases">
+
+          <!-- Phase 01 -->
+          <div class="card accordion">
+            <button class="accordion-btn" aria-expanded="false">
+              <div class="accordion-header">
+                <span class="phase-num">01</span>
+                <span class="accordion-title">Montage & faisabilité</span>
+              </div>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <p class="accordion-desc">Cadrage du projet, faisabilité réglementaire et financière, sécurisation avant engagement foncier.</p>
+              <div class="mission-list">
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Analyse du PLU, des servitudes et des risques (PPRI, PPRT, aléas retrait-gonflement des argiles)</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Étude d'adéquation programme / foncier / bilan prévisionnel</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Modélisation volumétrique sous SketchUp : vérification des gabarits, des prospects et de l'insertion urbaine</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Montage du Permis de Construire : constitution du dossier, échanges instructeur, suivi d'instruction</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Cadrage des contraintes techniques : accès, réseaux, mitoyenneté, pollution des sols, amiante</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Note de synthèse faisabilité avec grille de risques et estimation budgétaire</span></div>
+              </div>
+              <div class="livrables">
+                <span class="livrables-label">Livrables : </span>
+                <span class="livrables-text">Note de faisabilité, grille de risques, budget estimatif, planning macro</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 02 -->
+          <div class="card accordion">
+            <button class="accordion-btn" aria-expanded="false">
+              <div class="accordion-header">
+                <span class="phase-num">02</span>
+                <span class="accordion-title">Études & conception</span>
+              </div>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <p class="accordion-desc">Suivi des études APS / APD / PRO en lien avec la maîtrise d'œuvre. Cohérence technique et économique à chaque jalon.</p>
+              <div class="mission-list">
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Pilotage des réunions de conception avec architecte et BET (structure, fluides, acoustique, thermique)</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Vérification de conformité des études aux exigences du programme et du PC</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Suivi de l'évolution du budget prévisionnel au fil des phases d'études</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Mise au point du cahier des charges technique et des prescriptions générales</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Assistance à l'obtention des autorisations administratives complémentaires</span></div>
+              </div>
+              <div class="livrables">
+                <span class="livrables-label">Livrables : </span>
+                <span class="livrables-text">CR de conception, suivi budget études, tableau de conformité programme</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 03 -->
+          <div class="card accordion">
+            <button class="accordion-btn" aria-expanded="false">
+              <div class="accordion-header">
+                <span class="phase-num">03</span>
+                <span class="accordion-title">Consultation & appel d'offres</span>
+              </div>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <p class="accordion-desc">Constitution du DCE, organisation des consultations, analyse et négociation. Des marchés clairs, des prix tenus, des entreprises fiables.</p>
+              <div class="mission-list">
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Vérification du DCE avant lancement : CCTP, DPGF, plans, RC, CCAP, annexes techniques</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Présélection des entreprises : capacités, références, assurances, santé financière</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Organisation des consultations en lien avec la maîtrise d'œuvre</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Analyse des offres : dépouillement, grille multicritères, recherche de variantes économiques</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Assistance aux négociations et recommandation motivée pour le choix des entreprises</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Mise au point des marchés de travaux et vérification des pièces contractuelles</span></div>
+              </div>
+              <div class="livrables">
+                <span class="livrables-label">Livrables : </span>
+                <span class="livrables-text">DCE vérifié, rapport d'analyse des offres, tableau comparatif, avis motivé</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 04 -->
+          <div class="card accordion">
+            <button class="accordion-btn" aria-expanded="false">
+              <div class="accordion-header">
+                <span class="phase-num">04</span>
+                <span class="accordion-title">Suivi d'exécution</span>
+              </div>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <p class="accordion-desc">Gestion opérationnelle du programme en phase travaux. Suivi technique, financier et administratif, anticipation des dérives.</p>
+              <div class="mission-list">
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Réunion de lancement chantier et mise en place des process de suivi</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Vérification des situations de travaux, contrôle des avenants, suivi budgétaire temps réel</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Relances contractuelles, suivi des délais, gestion des ordres de service</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Animation des comités de pilotage et rédaction des comptes-rendus</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Reporting mensuel : avancement physique, financier, commercial, points de vigilance</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Suivi des assurances chantier (TRC, DO, CNR) et des obligations contractuelles</span></div>
+              </div>
+              <div class="livrables">
+                <span class="livrables-label">Livrables : </span>
+                <span class="livrables-text">Reporting mensuel, tableau de bord budgétaire, CR de pilotage</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 05 -->
+          <div class="card accordion">
+            <button class="accordion-btn" aria-expanded="false">
+              <div class="accordion-header">
+                <span class="phase-num">05</span>
+                <span class="accordion-title">Volet commercial & pièces notaire</span>
+              </div>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <p class="accordion-desc">Coordination entre production technique et commercialisation. Concordance des pièces, gestion des TMA.</p>
+              <div class="mission-list">
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Montage des pièces commerciales : plans de vente, notices descriptives, tableaux de surfaces</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Vérification et retouche des plans de vente sous SketchUp si nécessaire (3D, agencements, cotations)</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Vérification de la concordance pièces notaire / pièces marché / plans architecte</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Gestion des TMA : réception des demandes, reformulation, chiffrage, validation client, mise à jour plans</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Suivi des accords et refus, mise à jour des fiches modificatives acquéreurs</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Dépôt et suivi des pièces notaire</span></div>
+              </div>
+              <div class="livrables">
+                <span class="livrables-label">Livrables : </span>
+                <span class="livrables-text">Pièces commerciales vérifiées, fiches TMA, tableau de suivi concordance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 06 -->
+          <div class="card accordion">
+            <button class="accordion-btn" aria-expanded="false">
+              <div class="accordion-header">
+                <span class="phase-num">06</span>
+                <span class="accordion-title">Livraison, OPR & garanties</span>
+              </div>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <p class="accordion-desc">Préparation et assistance à la réception. Levée des réserves. Pilotage de la GPA jusqu'à clôture de l'opération.</p>
+              <div class="mission-list">
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Préparation et assistance aux Opérations Préalables à la Réception (OPR)</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Visites de pré-livraison et contrôle de conformité aux prescriptions du marché</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>États des lieux de livraison logements et parties communes</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Suivi de la levée des réserves, relances entreprises</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Pilotage de la GPA : désordres signalés, relances, suivi jusqu'à clôture</span></div>
+                <div class="mission-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Assistance à la constitution du DOE et des pièces de fin d'opération</span></div>
+              </div>
+              <div class="livrables">
+                <span class="livrables-label">Livrables : </span>
+                <span class="livrables-text">PV d'OPR, tableau de suivi des réserves, rapport GPA, checklist DOE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULES -->
+    <section id="formules" class="section fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2>Formules d'intervention</h2>
+        </div>
+
+        <div class="packs-grid">
+
+          <div class="card pack-card">
+            <div class="pack-name">Renfort ponctuel</div>
+            <div class="pack-price">Sur devis</div>
+            <div class="pack-desc">Mission ciblée sur une phase ou un sujet précis : appel d'offres, montage PC, livraison, audit.</div>
+            <div class="pack-includes">
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Intervention à la carte</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Facturation au réel</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Idéal pour un surcroît d'activité ou un déblocage</span></div>
+            </div>
+          </div>
+
+          <div class="card pack-card highlight">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+              <span class="pack-name">Convention de programme</span>
+              <span class="badge" style="font-size: 12px;">Recommandé</span>
+            </div>
+            <div class="pack-price">Sur devis</div>
+            <div class="pack-desc">Engagement par phase avec livrables définis, du montage à la GPA ou sur les phases de votre choix.</div>
+            <div class="pack-includes">
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Facturation au forfait par phase</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Budget fixe et prévisible</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Livrables contractuels par phase</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Modules IA inclus ou en option</span></div>
+            </div>
+          </div>
+
+          <div class="card pack-card">
+            <div class="pack-name">Accompagnement continu</div>
+            <div class="pack-price">Sur devis</div>
+            <div class="pack-desc">Suivi de plusieurs programmes en parallèle, reporting automatisé, priorisation flexible.</div>
+            <div class="pack-includes">
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Facturation au forfait mensuel</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Disponibilité garantie</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Reporting automatisé multi-programmes</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Ajustable mois par mois</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFRES COMPLÉMENTAIRES -->
+    <section id="ia" class="section section-alt fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2>Offres complémentaires</h2>
+        </div>
+        <div class="complementary-grid">
+          <a href="https://buildoto.com" target="_blank" rel="noopener" class="complementary-card">
+            <img src="photos/logo/buildoto.png" alt="Buildoto" class="complementary-logo">
+            <div class="complementary-title">Intégrer l'IA dans vos process</div>
+            <div class="complementary-desc">Formation, audit et déploiement d'outils IA adaptés à vos équipes et vos workflows existants.</div>
+          </a>
+          <a href="https://beforbuild.com" target="_blank" rel="noopener" class="complementary-card">
+            <img src="photos/logo/beforbuild.png" alt="BeForBuild" class="complementary-logo">
+            <div class="complementary-title">Gestion de projets immobilier</div>
+            <div class="complementary-desc">Plateforme dédiée au pilotage d'opérations immobilières : planning, budget, documents.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section fade-in">
+      <div class="container">
+        <div class="faq-container">
+          <div class="section-header" style="text-align: center;">
+            <h2>Questions fréquentes</h2>
+          </div>
+
+          <div class="faq-group accordion-group" data-group="faq">
+
+            <div class="card accordion">
+              <button class="faq-btn" aria-expanded="false">
+                <span class="faq-q">AMO ou MOD — quelle différence concrète ?</span>
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-body">En AMO, je conseille et j'assiste — vous restez décisionnaire et signataire de tous les actes (marchés, ordres de service, réception). En MOD, j'agis par mandat en votre nom avec une assurance décennale dédiée. Les deux sont possibles selon votre besoin.</div>
+            </div>
+
+            <div class="card accordion">
+              <button class="faq-btn" aria-expanded="false">
+                <span class="faq-q">Comment intervenez-vous en pratique ?</span>
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-body">Je m'intègre dans vos équipes comme un collaborateur opérationnel. J'ai travaillé comme ça pendant 17 ans chez Nexity, Cardinal et en consulting — je connais le fonctionnement interne d'un promoteur. Je travaille avec vos outils, je participe à vos réunions, j'utilise vos process.</div>
+            </div>
+
+            <div class="card accordion">
+              <button class="faq-btn" aria-expanded="false">
+                <span class="faq-q">Les modules IA fonctionnent avec nos logiciels existants ?</span>
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-body">Oui. Je travaille à partir des données que vous avez déjà — fichiers Excel, PDF, emails, logiciels métier (SCI5, Gr Immo, Primpromo…). Les outils que je développe (workflows N8N, bases Supabase/Baserow, interfaces Weweb) se branchent sur votre existant. Pas de migration, opérationnel en quelques jours.</div>
+            </div>
+
+            <div class="card accordion">
+              <button class="faq-btn" aria-expanded="false">
+                <span class="faq-q">C'est finançable ?</span>
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-body">Les modules IA sont éligibles au programme IA Booster France 2030 de Bpifrance (50% de prise en charge) et au Pack IA France Num (jusqu'à 80%, plafond 18 500 €). Le montage du dossier est inclus dans la prestation.</div>
+            </div>
+
+            <div class="card accordion">
+              <button class="faq-btn" aria-expanded="false">
+                <span class="faq-q">On peut commencer par un seul programme ?</span>
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-body">C'est ce que je recommande. On identifie le programme le plus pertinent, on définit un périmètre clair, et vous jugez sur les résultats avant d'aller plus loin.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section id="contact" class="cta-section fade-in">
+      <div class="container">
+        <div class="cta-inner">
+          <h2 class="cta-title">Échangeons sur votre besoin</h2>
+          <p class="cta-desc">
+            Réservez un créneau de 45 minutes pour échanger sur votre organisation,
+            identifier les missions pertinentes et définir un périmètre d'intervention.
+          </p>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <button data-cal-link="sebastien-mignot/rendez-vous-decouverte-sebastien-mignot-amo" data-cal-config='{"layout":"month_view"}' class="btn-primary">
+              Réserver un rendez-vous
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </button>
+            <a href="mailto:s.mignot@buildoto.com?subject=Prise%20de%20contact%20AMO" class="btn-outline" style="border-color: hsl(0 0% 40%); color: var(--accent-fg);">
+              Envoyer un email
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CADRE JURIDIQUE (inside dark CTA area) -->
+    <section style="background: hsl(0 0% 9%); padding: 0 0 48px;">
+      <div class="container">
+        <details>
+          <summary class="legal-toggle">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            Cadre juridique & assurance
+          </summary>
+          <div class="legal-content">
+            <div class="legal-grid">
+              <div>
+                <div class="legal-label">Statut</div>
+                <div class="legal-value">AMO strict</div>
+              </div>
+              <div>
+                <div class="legal-label">Responsabilité</div>
+                <div class="legal-value">Obligation de moyens</div>
+              </div>
+              <div>
+                <div class="legal-label">Assurance</div>
+                <div class="legal-value">RC Professionnelle</div>
+              </div>
+              <div>
+                <div class="legal-label">Structure</div>
+                <div class="legal-value">Auto-entrepreneur</div>
+              </div>
+            </div>
+            <p style="margin: 0 0 12px;">
+              Mission de conseil et d'assistance au sens de la loi MOP.
+              Le maître d'ouvrage reste seul décisionnaire et signataire.
+              Pas de signature de marchés, pas de direction de travaux, pas de maîtrise d'œuvre.
+            </p>
+            <p style="margin: 0; font-size: 13px;">
+              Convention de Maîtrise d'Ouvrage Déléguée (MOD) avec assurance décennale
+              possible sur demande pour les missions nécessitant pouvoir de représentation.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      Sébastien Mignot — Auto-entrepreneur — SIRET [en cours d'immatriculation]
+      <br>
+      RC Professionnelle n°[contrat] — [Nom assureur]
+    </div>
+  </footer>
+
+  <script>
+    // Accordion logic — one open at a time per group
+    document.querySelectorAll('.accordion-group').forEach(function(group) {
+      group.querySelectorAll('.accordion-btn, .faq-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var item = btn.closest('.accordion');
+          var wasOpen = item.classList.contains('open');
+
+          // Close all in this group
+          group.querySelectorAll('.accordion').forEach(function(a) {
+            a.classList.remove('open');
+            var expandBtn = a.querySelector('[aria-expanded]');
+            if (expandBtn) expandBtn.setAttribute('aria-expanded', 'false');
+          });
+
+          // Toggle clicked
+          if (!wasOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
+
+    // Fade-in on scroll
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    // Hamburger menu
+    var hamburger = document.querySelector('.hamburger');
+    var mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', function() {
+      var isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      if (isOpen) {
+        hamburger.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+      } else {
+        hamburger.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      }
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+    });
+
+    // Navbar scroll shadow
+    var navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) {
+        navbar.style.boxShadow = '0 1px 8px rgba(0,0,0,0.06)';
+      } else {
+        navbar.style.boxShadow = 'none';
+      }
+    });
+
+    // Gallery — init slides per card
+    (function() {
+      document.querySelectorAll('.gallery-card[data-images]').forEach(function(card) {
+        var images = card.getAttribute('data-images').split(',').map(function(s) { return s.trim(); });
+        var slidesEl = card.querySelector('.gallery-slides');
+        if (!slidesEl || images.length < 2) {
+          // Single image — just mark active
+          var img = slidesEl && slidesEl.querySelector('img');
+          if (img) img.classList.add('active');
+          return;
+        }
+
+        // Build all slides
+        var alt = card.querySelector('.gallery-caption') ? card.querySelector('.gallery-caption').textContent : '';
+        slidesEl.innerHTML = '';
+        images.forEach(function(src, i) {
+          var img = document.createElement('img');
+          img.src = src;
+          img.alt = alt;
+          img.loading = 'lazy';
+          if (i === 0) img.classList.add('active');
+          slidesEl.appendChild(img);
+        });
+
+        // Dots
+        var dotsWrap = document.createElement('div');
+        dotsWrap.className = 'gallery-dots';
+        images.forEach(function(_, i) {
+          var dot = document.createElement('button');
+          dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+          dot.addEventListener('click', function(e) {
+            e.stopPropagation();
+            showSlide(i);
+          });
+          dotsWrap.appendChild(dot);
+        });
+        slidesEl.appendChild(dotsWrap);
+
+        // Prev/Next arrows
+        var prevBtn = document.createElement('button');
+        prevBtn.className = 'slide-arrow slide-arrow--prev';
+        prevBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>';
+        var nextBtn = document.createElement('button');
+        nextBtn.className = 'slide-arrow slide-arrow--next';
+        nextBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>';
+        slidesEl.appendChild(prevBtn);
+        slidesEl.appendChild(nextBtn);
+
+        var current = 0;
+        function showSlide(n) {
+          current = (n + images.length) % images.length;
+          slidesEl.querySelectorAll('img').forEach(function(img, i) {
+            img.classList.toggle('active', i === current);
+          });
+          dotsWrap.querySelectorAll('.gallery-dot').forEach(function(d, i) {
+            d.classList.toggle('active', i === current);
+          });
+        }
+
+        prevBtn.addEventListener('click', function(e) { e.stopPropagation(); showSlide(current - 1); });
+        nextBtn.addEventListener('click', function(e) { e.stopPropagation(); showSlide(current + 1); });
+      });
+    })();
+
+    // Gallery — continuous scroll
+    (function() {
+      var track = document.querySelector('.gallery-track');
+      var leftBtn = document.querySelector('.gallery-arrow--left');
+      var rightBtn = document.querySelector('.gallery-arrow--right');
+      if (!track) return;
+
+      // Clone all cards for seamless loop (skip comment node)
+      var cards = Array.from(track.querySelectorAll('.gallery-card'));
+      cards.forEach(function(card) {
+        track.appendChild(card.cloneNode(true));
+      });
+
+      var speed = 0.8;
+      var paused = false;
+      var halfWidth = 0;
+
+      function measureHalf() {
+        var gap = 20;
+        halfWidth = 0;
+        for (var i = 0; i < cards.length; i++) {
+          halfWidth += cards[i].offsetWidth + gap;
+        }
+      }
+      measureHalf();
+      window.addEventListener('resize', measureHalf);
+
+      track.addEventListener('mouseenter', function() { paused = true; });
+      track.addEventListener('mouseleave', function() { paused = false; });
+
+      function animate() {
+        if (!paused) {
+          track.scrollLeft += speed;
+          if (track.scrollLeft >= halfWidth) {
+            track.scrollLeft -= halfWidth;
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      if (leftBtn && rightBtn) {
+        leftBtn.disabled = false;
+        leftBtn.addEventListener('click', function() {
+          track.scrollLeft -= 580;
+          if (track.scrollLeft < 0) track.scrollLeft += halfWidth;
+        });
+        rightBtn.addEventListener('click', function() {
+          track.scrollLeft += 580;
+          if (track.scrollLeft >= halfWidth) track.scrollLeft -= halfWidth;
+        });
+      }
+    })();
+  </script>
+
+  <!-- Cal.com Embed — popup modal -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", {origin:"https://app.cal.com"});
+    Cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+</body>
+</html>

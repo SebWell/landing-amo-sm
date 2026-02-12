@@ -1,0 +1,72 @@
+# Sébastien Mignot — AMO Promotion Immobilière
+
+> Assistance à Maîtrise d'Ouvrage pour promoteurs immobiliers. Basé à Vannes (Morbihan, Bretagne), rayon d'intervention de 150 km. +17 ans d'expérience, +500 logements livrés, projets de 1 à 30 M€.
+
+Sébastien Mignot est consultant indépendant en Assistance à Maîtrise d'Ouvrage (AMO) spécialisé dans la promotion immobilière. Il accompagne les promoteurs sur l'ensemble du cycle de vie d'une opération : faisabilité, montage technique et financier, permis de construire, conception, consultation des entreprises, suivi d'exécution, livraison et GPA.
+
+## Profil
+
+- Nom : Sébastien Mignot
+- Métier : AMO — Senior Project Manager en promotion immobilière
+- Localisation : Vannes (56), Bretagne, France
+- Zone d'intervention : 150 km autour de Vannes (Bretagne + Pays de la Loire)
+- Expérience : +17 ans (Nexity, Groupe Cardinal, Crédit Mutuel Immobilier, consulting UK/NL)
+- Formation : Master 2 Management Immobilier — EFAB Paris
+- Contact : s.mignot@buildoto.com
+- Rendez-vous : https://cal.com/sebastien-mignot/rendez-vous-decouverte-sebastien-mignot-amo
+
+## Services
+
+- Assistance à Maîtrise d'Ouvrage (AMO) : conseil et assistance opérationnelle, le maître d'ouvrage reste décisionnaire
+- Maîtrise d'Ouvrage Déléguée (MOD) : mandat d'agir au nom du maître d'ouvrage avec assurance décennale
+- Phases couvertes : faisabilité, coordination MOE, montage technique et financier, PC, conception, DCE, consultation et négociation des marchés, suivi d'exécution, volet commercial, livraison, GPA
+- Typologies : résidentiel, commerces, coworking, réhabilitation, logement social
+- Budgets : 1 à 30 M€, écart < 3% au budget référence
+
+## Formules d'intervention
+
+- Renfort ponctuel : intervention ciblée sur une phase spécifique (DCE, consultation, suivi chantier). Facturation au réel.
+- Convention de programme : prise en charge complète d'un programme du montage à la GPA. Facturation au forfait par phase.
+- Accompagnement continu : intégration dans l'équipe pour gérer plusieurs opérations en parallèle. Facturation au forfait mensuel.
+
+## Références
+
+- L'Avant-Scène, La Baule (44) : 81 logements + 2 500 m² commerces, Nexity
+- Le Rev 2, La Baule (44) : 52 logements, Nexity
+- Le Quartz, Nantes (44) : 25 logements, Pyramides d'Or 2014, Nexity
+- Le Renouillers, Colombes (92) : 66 logements, Groupe Cardinal
+- Ilot Cook 3, Colombes (92) : 78 logements, Groupe Cardinal
+- Le Paradis n'est pas artificiel, Colombes (92) : 84 logements, Groupe Cardinal
+- ALT, Marseille (13) : space working, 650 m²
+- Endoume, Marseille (13) : galerie & space working, 300 m²
+- L'Hespérie et Le Parvis : Crédit Mutuel Immobilier (ex-Ataraxia)
+- Les Belle Roches : résidence de tourisme, SUMO
+- Blomet : hôtel particulier surélevé, SUMO
+
+## FAQ
+
+- Q : AMO ou MOD, quelle différence concrète ?
+- R : En AMO, je conseille et j'assiste — vous restez décisionnaire et signataire de tous les actes. En MOD, j'agis par mandat en votre nom avec une assurance décennale dédiée.
+
+- Q : Comment intervenez-vous en pratique ?
+- R : Je m'intègre dans vos équipes comme un collaborateur opérationnel. Je travaille avec vos outils, je participe à vos réunions, j'utilise vos process.
+
+- Q : Les modules IA fonctionnent avec nos logiciels existants ?
+- R : Oui. Je travaille à partir de vos données existantes (Excel, PDF, emails, logiciels métier). Les outils développés (N8N, Supabase, Weweb) se branchent sur votre existant sans migration.
+
+- Q : C'est finançable ?
+- R : Les modules IA sont éligibles au programme IA Booster France 2030 de Bpifrance (50%) et au Pack IA France Num (jusqu'à 80%, plafond 18 500 €). Le montage du dossier est inclus.
+
+- Q : On peut commencer par un seul programme ?
+- R : C'est recommandé. On identifie le programme le plus pertinent, on définit un périmètre clair, et vous jugez sur les résultats avant d'aller plus loin.
+
+## Offres complémentaires
+
+- [Buildoto](https://buildoto.com) : Intégration de l'IA dans vos process internes — formation, audit et déploiement d'outils IA
+- [BeForBuild](https://beforbuild.com) : Plateforme de gestion de projets immobilier — pilotage d'opérations, planning, budget, documents
+
+## Liens
+
+- [Site principal](https://sebastien-mignot.com)
+- [CV](https://sebastien-mignot.com/cv-sebastien-mignot.pdf)
+- [Prendre rendez-vous](https://cal.com/sebastien-mignot/rendez-vous-decouverte-sebastien-mignot-amo)
