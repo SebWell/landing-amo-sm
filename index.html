@@ -516,8 +516,16 @@
     .gallery-track {
       display: flex;
       gap: 20px;
-      overflow-x: hidden;
-      padding: 0 0 16px;
+      overflow-x: auto;
+      padding: 0 32px 16px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .gallery-track::-webkit-scrollbar {
+      display: none;
     }
 
     .gallery-card {
@@ -527,6 +535,7 @@
       border: 1px solid var(--border);
       background: var(--bg);
       transition: transform 0.2s;
+      scroll-snap-align: start;
     }
 
     .gallery-card:hover {
@@ -1163,10 +1172,11 @@
 
       .gallery-track {
         gap: 14px;
+        padding: 0 20px 16px;
       }
 
       .gallery-card {
-        flex: 0 0 340px;
+        flex: 0 0 calc(100vw - 40px);
       }
 
       .gallery-slides,
@@ -2090,57 +2100,26 @@
       });
     })();
 
-    // Gallery — continuous scroll
+    // Gallery — card-by-card navigation
     (function() {
       var track = document.querySelector('.gallery-track');
       var leftBtn = document.querySelector('.gallery-arrow--left');
       var rightBtn = document.querySelector('.gallery-arrow--right');
       if (!track) return;
 
-      // Clone all cards for seamless loop (skip comment node)
       var cards = Array.from(track.querySelectorAll('.gallery-card'));
-      cards.forEach(function(card) {
-        track.appendChild(card.cloneNode(true));
-      });
+      if (!cards.length) return;
 
-      var speed = 0.8;
-      var paused = false;
-      var halfWidth = 0;
-
-      function measureHalf() {
-        var gap = 20;
-        halfWidth = 0;
-        for (var i = 0; i < cards.length; i++) {
-          halfWidth += cards[i].offsetWidth + gap;
-        }
+      function scrollByCard(direction) {
+        var card = cards[0];
+        var gap = parseInt(getComputedStyle(track).gap) || 20;
+        var step = card.offsetWidth + gap;
+        track.scrollBy({ left: direction * step, behavior: 'smooth' });
       }
-      measureHalf();
-      window.addEventListener('resize', measureHalf);
-
-      track.addEventListener('mouseenter', function() { paused = true; });
-      track.addEventListener('mouseleave', function() { paused = false; });
-
-      function animate() {
-        if (!paused) {
-          track.scrollLeft += speed;
-          if (track.scrollLeft >= halfWidth) {
-            track.scrollLeft -= halfWidth;
-          }
-        }
-        requestAnimationFrame(animate);
-      }
-      animate();
 
       if (leftBtn && rightBtn) {
-        leftBtn.disabled = false;
-        leftBtn.addEventListener('click', function() {
-          track.scrollLeft -= 580;
-          if (track.scrollLeft < 0) track.scrollLeft += halfWidth;
-        });
-        rightBtn.addEventListener('click', function() {
-          track.scrollLeft += 580;
-          if (track.scrollLeft >= halfWidth) track.scrollLeft -= halfWidth;
-        });
+        leftBtn.addEventListener('click', function() { scrollByCard(-1); });
+        rightBtn.addEventListener('click', function() { scrollByCard(1); });
       }
     })();
 
