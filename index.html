@@ -1599,8 +1599,8 @@
           <div class="gallery-slides"><img src="photos/gallery/alt-marseille/01.webp" alt="ALT — Marseille" loading="lazy" width="800" height="600"></div>
           <div class="gallery-caption"><strong>ALT</strong> — Marseille (13) · Space working · 650 m²</div>
         </div>
-        <div class="gallery-card" data-images="photos/gallery/endoume-marseille/01.webp,photos/gallery/endoume-marseille/02.webp,photos/gallery/endoume-marseille/03.webp">
-          <div class="gallery-slides"><img src="photos/gallery/endoume-marseille/01.webp" alt="Endoume — Marseille" loading="lazy" width="800" height="1066"></div>
+        <div class="gallery-card" data-images="photos/gallery/endoume-marseille/01.webp,photos/gallery/endoume-marseille/02.webp,photos/gallery/endoume-marseille/03.webp" data-crop="top">
+          <div class="gallery-slides"><img src="photos/gallery/endoume-marseille/01.webp" alt="Endoume — Marseille" loading="lazy" width="800" height="1066" style="object-position:top"></div>
           <div class="gallery-caption"><strong>Endoume</strong> — Marseille (13) · Galerie & space working · 300 m²</div>
         </div>
         <div class="gallery-card" data-images="photos/gallery/quiberon/01.webp">
@@ -1615,8 +1615,8 @@
           <div class="gallery-slides"><img src="photos/gallery/sumo/02.webp" alt="Blomet — SUMO" loading="lazy" width="800" height="669"></div>
           <div class="gallery-caption"><strong>Blomet</strong> — Hôtel particulier surélevé · SUMO</div>
         </div>
-        <div class="gallery-card" data-images="photos/gallery/endoume-marseille/credit-mutuel-immobilier/01.webp,photos/gallery/endoume-marseille/credit-mutuel-immobilier/02.webp">
-          <div class="gallery-slides"><img src="photos/gallery/endoume-marseille/credit-mutuel-immobilier/01.webp" alt="Crédit Mutuel Immobilier" loading="lazy" width="800" height="600"></div>
+        <div class="gallery-card" data-images="photos/gallery/credit-mutuel-immobilier/01.webp,photos/gallery/credit-mutuel-immobilier/02.webp">
+          <div class="gallery-slides"><img src="photos/gallery/credit-mutuel-immobilier/01.webp" alt="Crédit Mutuel Immobilier" loading="lazy" width="800" height="600"></div>
           <div class="gallery-caption"><strong>Crédit Mutuel Immobilier</strong> — ex-Ataraxia · Consulting</div>
         </div>
         </div>
@@ -2045,6 +2045,7 @@
 
         // Build all slides
         var alt = card.querySelector('.gallery-caption') ? card.querySelector('.gallery-caption').textContent : '';
+        var crop = card.getAttribute('data-crop');
         slidesEl.innerHTML = '';
         images.forEach(function(src, i) {
           var img = document.createElement('img');
@@ -2054,6 +2055,7 @@
           img.width = 800;
           img.height = 600;
           if (i === 0) img.classList.add('active');
+          if (crop) img.style.objectPosition = crop;
           slidesEl.appendChild(img);
         });
 
