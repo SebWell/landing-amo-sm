@@ -862,7 +862,7 @@
     /* ── FORMULES ── */
     .packs-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 16px;
       align-items: start;
     }
@@ -917,6 +917,32 @@
       margin-top: 2px;
       flex-shrink: 0;
       color: var(--muted);
+    }
+
+    .pack-price-amount {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--fg);
+    }
+
+    .pack-price-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .renfort-mention {
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 20px;
+      padding: 14px 20px;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+    }
+
+    .renfort-mention strong {
+      color: var(--fg);
     }
 
     /* ── FAQ ── */
@@ -1252,6 +1278,500 @@
       .legal-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+    }
+
+    /* ── PRICE MODAL ── */
+    .price-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .price-modal-overlay.open {
+      display: flex;
+    }
+    .price-modal-overlay.visible {
+      opacity: 1;
+    }
+    .price-modal {
+      background: var(--bg);
+      border-radius: 12px;
+      max-width: 820px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      transform: scale(0.95);
+      transition: transform 0.25s ease;
+    }
+    .price-modal-overlay.visible .price-modal {
+      transform: scale(1);
+    }
+    .price-modal-close {
+      position: sticky;
+      top: 0;
+      float: right;
+      z-index: 10;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--muted);
+      margin: 16px 16px 0 0;
+      transition: background 0.15s;
+    }
+    .price-modal-close:hover {
+      background: var(--muted-bg);
+      color: var(--fg);
+    }
+    .price-modal-body {
+      padding: 0 40px 40px;
+    }
+
+    /* Comparatif */
+    .comp-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .comp-header h3 {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0 0 8px;
+    }
+    .comp-header p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .comp-section {
+      margin-bottom: 32px;
+    }
+    .comp-section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .comp-section-title .comp-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--muted-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* Salary card */
+    .salary-card {
+      background: var(--muted-bg);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .salary-breakdown {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px 24px;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    .salary-breakdown .sb-label {
+      color: var(--muted);
+    }
+    .salary-breakdown .sb-value {
+      text-align: right;
+      font-weight: 500;
+    }
+    .salary-breakdown .sb-total {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--fg);
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+    .salary-slider-row {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .salary-slider-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .salary-slider-label strong {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--fg);
+    }
+    .comp-slider {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--border);
+      outline: none;
+    }
+    .comp-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+    }
+    .comp-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      border: none;
+    }
+    .salary-per-prog {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .salary-per-prog .spp-item {
+      text-align: center;
+      padding: 12px 8px;
+      background: var(--bg);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .spp-item .spp-val {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--fg);
+    }
+    .spp-item .spp-label {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* Hidden costs grid */
+    .hidden-costs-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+    .hc-item {
+      padding: 14px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .hc-item .hc-val {
+      font-size: 16px;
+      font-weight: 700;
+      color: hsl(0 84% 60%);
+      margin-bottom: 4px;
+    }
+    .hc-item .hc-label {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+    .hc-total {
+      margin-top: 12px;
+      padding: 14px;
+      background: hsl(0 86% 97%);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .hc-total .hc-total-val {
+      font-size: 20px;
+      font-weight: 700;
+      color: hsl(0 84% 60%);
+    }
+    .hc-total .hc-total-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* AMO offer cards */
+    .offre-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .offre-card {
+      padding: 20px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .offre-card:hover {
+      border-color: var(--muted);
+    }
+    .offre-card.selected {
+      border-color: var(--accent);
+      background: hsl(0 0% 98%);
+    }
+    .offre-card .oc-name {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .offre-card .oc-price {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .offre-card .oc-unit {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .offre-card .oc-detail {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .offre-card .oc-features {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+    .offre-card .oc-features li {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 2px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .offre-card .oc-features li::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--muted);
+      flex-shrink: 0;
+    }
+
+    /* Visual bars */
+    .comp-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .comp-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .comp-bar-label {
+      width: 80px;
+      font-size: 12px;
+      font-weight: 600;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .comp-bar-track {
+      flex: 1;
+      height: 32px;
+      background: var(--muted-bg);
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+    .comp-bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+      transition: width 0.4s ease;
+      white-space: nowrap;
+    }
+    .comp-bar-fill.bar-sal {
+      background: hsl(0 0% 30%);
+      width: 100%;
+    }
+    .comp-bar-fill.bar-amo {
+      background: hsl(142 71% 45%);
+    }
+    .comp-economy {
+      margin-top: 12px;
+      padding: 16px;
+      background: hsl(142 76% 96%);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .comp-economy .eco-val {
+      font-size: 28px;
+      font-weight: 700;
+      color: hsl(142 71% 30%);
+    }
+    .comp-economy .eco-label {
+      font-size: 13px;
+      color: hsl(142 71% 35%);
+      margin-top: 2px;
+    }
+    .comp-economy .eco-detail {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Advantages table */
+    .avantages-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .avantages-table th {
+      text-align: left;
+      padding: 10px 12px;
+      font-weight: 600;
+      font-size: 12px;
+      color: var(--muted);
+      background: var(--muted-bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .avantages-table th:not(:first-child) {
+      text-align: center;
+      width: 100px;
+    }
+    .avantages-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid hsl(0 0% 94%);
+    }
+    .avantages-table td:not(:first-child) {
+      text-align: center;
+      width: 100px;
+    }
+    .avantages-table .av-check {
+      color: hsl(142 71% 45%);
+      font-weight: 700;
+    }
+    .avantages-table .av-cross {
+      color: hsl(0 84% 60%);
+      font-weight: 700;
+    }
+    .avantages-table .av-dash {
+      color: var(--muted);
+    }
+
+    /* Scenarios table */
+    .scenarios-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .scenarios-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 480px;
+    }
+    .scenarios-table th {
+      text-align: left;
+      padding: 10px 12px;
+      font-weight: 600;
+      font-size: 12px;
+      color: var(--muted);
+      background: var(--muted-bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .scenarios-table th:not(:first-child) {
+      text-align: right;
+    }
+    .scenarios-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid hsl(0 0% 94%);
+    }
+    .scenarios-table td:not(:first-child) {
+      text-align: right;
+      font-weight: 500;
+    }
+    .scenarios-table .sc-eco-pos {
+      color: hsl(142 71% 30%);
+      font-weight: 600;
+    }
+    .scenarios-table .sc-eco-neg {
+      color: hsl(0 84% 60%);
+      font-weight: 600;
+    }
+    .scenarios-table .sc-eco-zero {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* Synthese */
+    .comp-synthese {
+      padding: 24px;
+      background: var(--muted-bg);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .comp-synthese p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 6px;
+    }
+    .comp-synthese .synth-highlight {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--fg);
+    }
+    .comp-disclaimer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* Button centered under packs */
+    .price-btn-wrap {
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .price-modal-body { padding: 0 20px 28px; }
+      .hidden-costs-grid { grid-template-columns: repeat(2, 1fr); }
+      .offre-cards { grid-template-columns: 1fr; }
+      .salary-per-prog { grid-template-columns: 1fr; }
+      .comp-bar-label { width: 60px; font-size: 11px; }
+      .avantages-table, .scenarios-table { font-size: 12px; }
+      .avantages-table th:not(:first-child),
+      .avantages-table td:not(:first-child) { width: 70px; }
+    }
+    @media (max-width: 480px) {
+      .hidden-costs-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 
@@ -1806,13 +2326,15 @@
         <div class="packs-grid">
 
           <div class="card pack-card">
-            <div class="pack-name">Renfort ponctuel</div>
-            <div class="pack-price">Sur devis</div>
-            <div class="pack-desc">Mission ciblée sur une phase ou un sujet précis : appel d'offres, montage PC, livraison, audit.</div>
+            <div class="pack-name">Accompagnement mensuel</div>
+            <div class="pack-price">
+              <span class="pack-price-amount">1 350 € HT</span> / mois par projet
+            </div>
             <div class="pack-includes">
-              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Intervention à la carte</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Engagement au mois</span></div>
               <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Facturation au réel</span></div>
-              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Idéal pour un surcroît d'activité ou un déblocage</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Résiliable à tout moment</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Ajustable selon les phases</span></div>
             </div>
           </div>
 
@@ -1821,28 +2343,29 @@
               <span class="pack-name">Convention de programme</span>
               <span class="badge" style="font-size: 12px;">Recommandé</span>
             </div>
-            <div class="pack-price">Sur devis</div>
-            <div class="pack-desc">Engagement par phase avec livrables définis, du montage à la GPA ou sur les phases de votre choix.</div>
+            <div class="pack-price">
+              <span class="pack-price-amount">45 000 € HT</span> / projet
+            </div>
+            <div class="pack-price-sub">soit 1 250 €/mois lissé sur 36 mois</div>
             <div class="pack-includes">
-              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Facturation au forfait par phase</span></div>
               <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Budget fixe et prévisible</span></div>
               <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Livrables contractuels par phase</span></div>
               <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Modules IA inclus ou en option</span></div>
+              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Facturation par phase</span></div>
             </div>
           </div>
 
-          <div class="card pack-card">
-            <div class="pack-name">Accompagnement continu</div>
-            <div class="pack-price">Sur devis</div>
-            <div class="pack-desc">Suivi de plusieurs programmes en parallèle, reporting automatisé, priorisation flexible.</div>
-            <div class="pack-includes">
-              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Facturation au forfait mensuel</span></div>
-              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Disponibilité garantie</span></div>
-              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Reporting automatisé multi-programmes</span></div>
-              <div class="pack-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Ajustable mois par mois</span></div>
-            </div>
-          </div>
+        </div>
 
+        <div class="renfort-mention">
+          <strong>Renfort ponctuel</strong> — Intervention ciblée sur une phase ou un sujet précis. Sur devis.
+        </div>
+
+        <div class="price-btn-wrap">
+          <button class="btn-primary" onclick="openPriceModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><rect x="2" y="7" width="8" height="14" rx="1"/><rect x="14" y="3" width="8" height="18" rx="1"/></svg>
+            Comparer avec un salarié
+          </button>
         </div>
       </div>
     </section>
@@ -2165,6 +2688,372 @@
     } else {
       setTimeout(deferInit, 1);
     }
+  </script>
+
+  <!-- PRICE MODAL -->
+  <div class="price-modal-overlay" id="priceModalOverlay" onclick="if(event.target===this)closePriceModal()">
+    <div class="price-modal" onclick="event.stopPropagation()">
+      <button class="price-modal-close" onclick="closePriceModal()" aria-label="Fermer">&times;</button>
+      <div class="price-modal-body">
+
+        <!-- Comparatif -->
+        <div id="priceStep2">
+
+          <div class="comp-header">
+            <h3>AMO externe vs Salarie : le vrai comparatif</h3>
+            <p>Simulez le cout reel d'un responsable de programmes salarie et comparez avec mon offre AMO.</p>
+          </div>
+
+          <!-- 1. Cout d'un salarie -->
+          <div class="comp-section">
+            <div class="comp-section-title">
+              <span class="comp-icon">1</span>
+              Le vrai cout d'un salarie
+            </div>
+            <div class="salary-card">
+              <div class="salary-breakdown">
+                <span class="sb-label">Salaire brut annuel</span>
+                <span class="sb-value">50 000 &euro;</span>
+                <span class="sb-label">Charges patronales (~42%)</span>
+                <span class="sb-value">21 000 &euro;</span>
+                <span class="sb-label">Mutuelle, prevoyance, medecine du travail</span>
+                <span class="sb-value">~1 500 &euro;</span>
+                <span class="sb-label">Formation, materiel, transport</span>
+                <span class="sb-value">~2 500 &euro;</span>
+                <span class="sb-label sb-total">Cout employeur / an</span>
+                <span class="sb-value sb-total">75 000 &euro;</span>
+              </div>
+
+              <div class="salary-slider-row">
+                <div class="salary-slider-label">
+                  <span>Programmes suivis simultanement</span>
+                  <strong id="sliderVal">4</strong>
+                </div>
+                <input type="range" class="comp-slider" id="progSlider" min="2" max="6" value="4" oninput="updateComparatif()">
+              </div>
+
+              <div class="salary-per-prog" id="salaryPerProg">
+                <div class="spp-item">
+                  <div class="spp-val" id="sppTotal">56 250 &euro;</div>
+                  <div class="spp-label">par programme / 3 ans</div>
+                </div>
+                <div class="spp-item">
+                  <div class="spp-val" id="sppAn">18 750 &euro;</div>
+                  <div class="spp-label">par programme / an</div>
+                </div>
+                <div class="spp-item">
+                  <div class="spp-val" id="sppMois">1 563 &euro;</div>
+                  <div class="spp-label">par programme / mois</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Couts caches -->
+          <div class="comp-section">
+            <div class="comp-section-title">
+              <span class="comp-icon">2</span>
+              Couts caches d'un salarie
+            </div>
+            <div class="hidden-costs-grid">
+              <div class="hc-item">
+                <div class="hc-val">8 000 &euro;</div>
+                <div class="hc-label">Recrutement<br>Cabinet, entretiens</div>
+              </div>
+              <div class="hc-item">
+                <div class="hc-val">3 000 &euro;</div>
+                <div class="hc-label">Formation<br>Montee en competence</div>
+              </div>
+              <div class="hc-item">
+                <div class="hc-val">5 000 &euro;</div>
+                <div class="hc-label">Management<br>Supervision, suivi</div>
+              </div>
+              <div class="hc-item">
+                <div class="hc-val">4 000 &euro;</div>
+                <div class="hc-label">Remplacement<br>Conges, absences</div>
+              </div>
+              <div class="hc-item">
+                <div class="hc-val">15 000 &euro;</div>
+                <div class="hc-label">Licenciement<br>Indemnites legales</div>
+              </div>
+            </div>
+            <div class="hc-total">
+              <div class="hc-total-val">35 000 &euro;</div>
+              <div class="hc-total-label">Total couts caches sur la duree du contrat</div>
+            </div>
+          </div>
+
+          <!-- 3. Mon offre AMO -->
+          <div class="comp-section">
+            <div class="comp-section-title">
+              <span class="comp-icon">3</span>
+              Mon offre AMO
+            </div>
+            <div class="offre-cards">
+              <div class="offre-card selected" id="cardMensuel" onclick="selectFormule('mensuel')">
+                <div class="oc-name">Formule mensuelle</div>
+                <div class="oc-price">1 350 &euro; <span style="font-size:13px;font-weight:400;color:var(--muted)">HT/mois</span></div>
+                <div class="oc-unit">par projet</div>
+                <div class="oc-detail">Total sur 36 mois : <strong>48 600 &euro;</strong></div>
+                <ul class="oc-features">
+                  <li>Engagement au mois</li>
+                  <li>Facturation au reel</li>
+                  <li>Resiliable a tout moment</li>
+                  <li>Ajustable selon les phases</li>
+                </ul>
+              </div>
+              <div class="offre-card" id="cardForfait" onclick="selectFormule('forfait')">
+                <div class="oc-name">Forfait programme complet</div>
+                <div class="oc-price">45 000 &euro; <span style="font-size:13px;font-weight:400;color:var(--muted)">HT/projet</span></div>
+                <div class="oc-unit">du montage a la GPA &middot; 3 ans</div>
+                <div class="oc-detail">Lisse : <strong>1 250 &euro;/mois</strong></div>
+                <ul class="oc-features">
+                  <li>Budget maitrise des la signature</li>
+                  <li>Facturation par phase</li>
+                  <li>Jalons definis</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Comparaison visuelle -->
+          <div class="comp-section">
+            <div class="comp-section-title">
+              <span class="comp-icon">4</span>
+              Comparaison par programme (sur 3 ans)
+            </div>
+            <div class="comp-bars">
+              <div class="comp-bar-row">
+                <div class="comp-bar-label">Salarie</div>
+                <div class="comp-bar-track">
+                  <div class="comp-bar-fill bar-sal" id="barSal">56 250 &euro;</div>
+                </div>
+              </div>
+              <div class="comp-bar-row">
+                <div class="comp-bar-label">AMO</div>
+                <div class="comp-bar-track">
+                  <div class="comp-bar-fill bar-amo" id="barAmo" style="width:86%">48 600 &euro;</div>
+                </div>
+              </div>
+            </div>
+            <div class="comp-economy" id="compEconomy">
+              <div class="eco-val" id="ecoVal">7 650 &euro;</div>
+              <div class="eco-label" id="ecoLabel">d'economie par programme sur 3 ans</div>
+              <div class="eco-detail" id="ecoDetail">soit 213 &euro;/mois d'economie</div>
+            </div>
+          </div>
+
+          <!-- 5. Tableau avantages -->
+          <div class="comp-section">
+            <div class="comp-section-title">
+              <span class="comp-icon">5</span>
+              Avantages compares
+            </div>
+            <div class="scenarios-wrap">
+              <table class="avantages-table">
+                <thead>
+                  <tr><th>Critere</th><th>Salarie</th><th>AMO</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Operationnel des J1 (17 ans d'experience)</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>Zero charge fixe si pas de programme</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>Pas de conges payes a financer</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>Pas de charges patronales (42%)</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>Pas de cout de recrutement</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>Pas d'indemnite de licenciement</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>Pas de management a assurer</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>Resiliable sans preavis ni surcout</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>Outils IA inclus (reporting, suivi, docs)</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>SketchUp integre (faisabilite 3D)</td><td class="av-cross">&times;</td><td class="av-check">&#10003;</td></tr>
+                  <tr><td>Presence physique quotidienne</td><td class="av-check">&#10003;</td><td class="av-dash">&mdash;</td></tr>
+                  <tr><td>Integration equipe permanente</td><td class="av-check">&#10003;</td><td class="av-dash">&mdash;</td></tr>
+                  <tr><td>Polyvalence sur taches hors programme</td><td class="av-check">&#10003;</td><td class="av-dash">&mdash;</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 6. Scenarios multi-programmes -->
+          <div class="comp-section">
+            <div class="comp-section-title">
+              <span class="comp-icon">6</span>
+              Scenarios multi-programmes (cout / an)
+            </div>
+            <div class="scenarios-wrap">
+              <table class="scenarios-table" id="scenariosTable">
+                <thead>
+                  <tr><th>Programmes</th><th>Salarie / an</th><th>AMO / an</th><th>Economie / an</th></tr>
+                </thead>
+                <tbody id="scenariosBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 7. Synthese -->
+          <div class="comp-section">
+            <div class="comp-synthese">
+              <p class="synth-highlight" id="synthText">Jusqu'a 4 programmes simultanes, l'AMO externe est plus economique qu'un salarie.</p>
+              <p>Vous gardez la flexibilite, la qualite d'execution, et vous ne payez que ce dont vous avez besoin.</p>
+            </div>
+            <div class="comp-disclaimer">
+              Simulation basee sur un cout employeur cadre a 50K brut incluant charges patronales (42%), mutuelle, prevoyance et frais annexes. Duree programme : 36 mois.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── Price Modal Logic ──
+    var currentFormule = 'mensuel';
+    var SAL_COUT_AN = 75000;
+    var DUREE_MOIS = 36;
+    var DUREE_ANS = 3;
+    var MENSUEL_HT = 1350;
+    var FORFAIT_HT = 45000;
+
+    function formatNum(n) {
+      return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    }
+
+    function openPriceModal() {
+      var overlay = document.getElementById('priceModalOverlay');
+      overlay.classList.add('open');
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          overlay.classList.add('visible');
+        });
+      });
+      document.body.style.overflow = 'hidden';
+      updateComparatif();
+    }
+
+    function closePriceModal() {
+      var overlay = document.getElementById('priceModalOverlay');
+      overlay.classList.remove('visible');
+      setTimeout(function() {
+        overlay.classList.remove('open');
+      }, 250);
+      document.body.style.overflow = '';
+    }
+
+    function selectFormule(f) {
+      currentFormule = f;
+      document.getElementById('cardMensuel').classList.toggle('selected', f === 'mensuel');
+      document.getElementById('cardForfait').classList.toggle('selected', f === 'forfait');
+      updateComparatif();
+    }
+
+    function updateComparatif() {
+      var nbProg = parseInt(document.getElementById('progSlider').value);
+      document.getElementById('sliderVal').textContent = nbProg;
+
+      var salProgTotal = (SAL_COUT_AN * DUREE_ANS) / nbProg;
+      var salProgAn = SAL_COUT_AN / nbProg;
+      var salProgMois = salProgAn / 12;
+
+      document.getElementById('sppTotal').textContent = formatNum(salProgTotal) + ' \u20AC';
+      document.getElementById('sppAn').textContent = formatNum(salProgAn) + ' \u20AC';
+      document.getElementById('sppMois').textContent = formatNum(salProgMois) + ' \u20AC';
+
+      var offreTotal, offreMois, offreAn;
+      if (currentFormule === 'mensuel') {
+        offreTotal = MENSUEL_HT * DUREE_MOIS;
+        offreMois = MENSUEL_HT;
+      } else {
+        offreTotal = FORFAIT_HT;
+        offreMois = FORFAIT_HT / DUREE_MOIS;
+      }
+      offreAn = offreMois * 12;
+
+      // Bars
+      document.getElementById('barSal').textContent = formatNum(salProgTotal) + ' \u20AC';
+      var barAmoPct = Math.min((offreTotal / salProgTotal) * 100, 100);
+      var barAmo = document.getElementById('barAmo');
+      barAmo.style.width = barAmoPct + '%';
+      barAmo.textContent = formatNum(offreTotal) + ' \u20AC';
+
+      // Economy
+      var economie = salProgTotal - offreTotal;
+      var econMois = economie / DUREE_MOIS;
+      var ecoDiv = document.getElementById('compEconomy');
+      var ecoVal = document.getElementById('ecoVal');
+      var ecoLabel = document.getElementById('ecoLabel');
+      var ecoDetail = document.getElementById('ecoDetail');
+
+      if (economie > 0) {
+        ecoDiv.style.background = 'hsl(142 76% 96%)';
+        ecoVal.style.color = 'hsl(142 71% 30%)';
+        ecoVal.textContent = formatNum(economie) + ' \u20AC';
+        ecoLabel.style.color = 'hsl(142 71% 35%)';
+        ecoLabel.textContent = "d'\u00E9conomie par programme sur 3 ans";
+        ecoDetail.textContent = 'soit ' + formatNum(econMois) + ' \u20AC/mois d\u2019\u00E9conomie';
+      } else if (economie < 0) {
+        ecoDiv.style.background = 'hsl(0 86% 97%)';
+        ecoVal.style.color = 'hsl(0 84% 60%)';
+        ecoVal.textContent = '+' + formatNum(Math.abs(economie)) + ' \u20AC';
+        ecoLabel.style.color = 'hsl(0 70% 50%)';
+        ecoLabel.textContent = 'de surcout par programme sur 3 ans';
+        ecoDetail.textContent = 'Le salarie devient avantageux a ce volume';
+      } else {
+        ecoDiv.style.background = 'var(--muted-bg)';
+        ecoVal.style.color = 'var(--muted)';
+        ecoVal.textContent = '0 \u20AC';
+        ecoLabel.style.color = 'var(--muted)';
+        ecoLabel.textContent = 'Point d\u2019\u00E9quilibre atteint';
+        ecoDetail.textContent = '';
+      }
+
+      // Scenarios table
+      var tbody = document.getElementById('scenariosBody');
+      tbody.innerHTML = '';
+      for (var n = 1; n <= 5; n++) {
+        var sAn = SAL_COUT_AN;
+        var aAn = n * offreMois * 12;
+        var diff = sAn - aAn;
+        var tr = document.createElement('tr');
+        var tdN = document.createElement('td');
+        tdN.textContent = n + ' programme' + (n > 1 ? 's' : '');
+        var tdSal = document.createElement('td');
+        tdSal.textContent = formatNum(sAn) + ' \u20AC';
+        var tdAmo = document.createElement('td');
+        tdAmo.textContent = formatNum(aAn) + ' \u20AC';
+        var tdEco = document.createElement('td');
+        if (diff > 0) {
+          tdEco.textContent = '+' + formatNum(diff) + ' \u20AC';
+          tdEco.className = 'sc-eco-pos';
+        } else if (diff < 0) {
+          tdEco.textContent = '-' + formatNum(Math.abs(diff)) + ' \u20AC';
+          tdEco.className = 'sc-eco-neg';
+        } else {
+          tdEco.textContent = '0 \u20AC';
+          tdEco.className = 'sc-eco-zero';
+        }
+        tr.appendChild(tdN);
+        tr.appendChild(tdSal);
+        tr.appendChild(tdAmo);
+        tr.appendChild(tdEco);
+        tbody.appendChild(tr);
+      }
+
+      // Synthese
+      var breakeven = Math.floor(SAL_COUT_AN / (offreMois * 12));
+      var synthEl = document.getElementById('synthText');
+      if (breakeven >= 5) {
+        synthEl.textContent = 'Jusqu\u2019\u00E0 5 programmes ou plus, l\u2019AMO externe reste plus \u00E9conomique qu\u2019un salari\u00E9.';
+      } else if (breakeven <= 0) {
+        synthEl.textContent = 'Le salari\u00E9 est plus \u00E9conomique d\u00E8s le premier programme.';
+      } else {
+        synthEl.textContent = 'Jusqu\u2019\u00E0 ' + breakeven + ' programme' + (breakeven > 1 ? 's' : '') + ' simultan\u00E9' + (breakeven > 1 ? 's' : '') + ', l\u2019AMO externe est plus \u00E9conomique qu\u2019un salari\u00E9.';
+      }
+    }
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closePriceModal();
+    });
   </script>
 
 </body>
